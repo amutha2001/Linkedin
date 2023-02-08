@@ -10,11 +10,56 @@
      
     <script>
 	    var divi=document.createElement("div")
-	    var inp1=document.createElement("input").value;
-	    var inp2=document.createElement("input").value;
+	    var inp1=document.createElement("input");
+	    var inp2=document.createElement("input");
+		var btn=document.createElement("button");
+		var anchor=document.createElement("a");
+		
 		document.body.appendChild(divi);
 		divi.appendChild(inp1);
 		divi.appendChild(inp2);
+	    divi.appendChild(btn);
+		inp1.setAttribute("placeholder","enter the email");
+		inp2.setAttribute("placeholder","enter the password");
+		btn.setAttribute("id","click");
+		inp1.setAttribute("id","value1");
+		inp2.setAttribute("id","value2");
+		
+		btn.innerHTML="LOGIN";
+		divi.appendChild(btn);
+		inp1.style.display="block";
+		inp2.style.display="block";
+		inp1.style.margin="auto"
+		inp2.style.margin="auto";
+        
+		
+		
+		var error1=document.createElement("p");
+		error1.setAttribute("id","para1");
+		var error2=document.createElement("p");
+		error2.setAttribute("id","para2");
+		
+		var logi=document.getElementById("click");
+		logi.addEventListener("click",validate);
+		function validate(){
+		    if(inp1===""&& inp2===""){
+				   document.getElementById("para1").innerHTML="email cannot be blank";
+				   document.getElementById("para2").innerHTML="password cannot be blank";
+				}
+		else if(inp1==""){
+		   document.getElementById("para1").innerHTML="email cannot be blank";
+		}
+		else if(inp2==""){
+		      document.getElementById("para2").innerHTML="password cannot be blank";
+			 }
+	}
+			 <!-- else if(inp1!=""&&inp2!=""){ -->
+			    <!-- window.location="file:///D:/Fabevy/practice/Linkedin/index.html"; -->
+			    
+			 <!-- } -->
+		
+		
+		
 		
 	</script>
 </body>
