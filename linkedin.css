@@ -1,0 +1,52 @@
+.container{
+	width:80%;
+	margin:auto;
+}
+body{
+	background-color:#F3F2EF;
+}
+.section1{
+   border:1px solid red;
+   background-color:white;
+   margin-bottom:10px;
+}
+.header{
+	display:flex;
+	justify-content:space-between;
+}
+.search{
+	background-color:#EEF3F8;
+	margin-left:10px;
+	height:6vh;
+	border:1px solid black;
+	margin-top:5px;
+}
+input{
+	
+	background-color:#EEF3F8;
+	height:5vh;
+	color:white;
+	border:none;
+}
+.logo{
+	display:flex;
+	margin-top:10px;
+	width:39%;
+}
+.logo img{
+	height:40px;
+}
+.navbar{
+	width:59%;
+}
+.navbar ul{
+	display:flex;
+}
+li{
+	list-style-type:none;
+	padding-left:60px;
+}
+.navbar i{
+	font-size:20px;
+	color:grey;
+}
