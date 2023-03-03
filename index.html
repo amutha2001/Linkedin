@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkedin</title>
 	<link rel="stylesheet" href="linkedin.css">
-	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
-	<section class="section1">
+<header>
+    <section class="section1">
 	    <div class="container"> 
 		   <div class="header">
 				<div class="logo">
-					<img src="link.png" width="40px">
+					<img src="link.png" width="30px">
 					<div class="search">
 					   <i class="fa fa-search" aria-hidden="true"></i>
-					   <input type="text" placeholder="search">
+					   <input type="text" placeholder="search" id="search">
 					</div>
 				</div>
 				<div class="navbar">
@@ -31,8 +31,185 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
+</header>
+	<section class="section2">
+	    <div class="container">
+		    <div id="main">
+			   
+			</div>
+		</div>
+	</section>
+	
     <script>
+	    var my=
+		{
+		  image:"Amutha.jfif",
+		   Name:"AMUTHA M",
+		  course:"Front-End Developer",
+		  College:"Einstein college Of Engingineering",
+		  place:"Sivagamipuram"
+		}
+		
+		
+		
+		
+		
+	    var friends=[
+		{
+		    image:"priya.jfif",
+		    Name:"Priya",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"kadaiyam"
+			
+		},
+		{
+		    image:"saran.jfif",
+		    Name:"Saranya",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"killapavoor"
+		},
+		{
+		    image:"durga.jfif",
+		    Name:"Durga",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"kadaiyam"
+		},
+		{
+		    image:"anitha.jfif",
+		    Name:"Anitha",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"killapavoor"
+			
+		},
+		{
+		    image:"aruna.jfif",
+		    Name:"Aruna",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"killapavoor"
+			
+		},
+		{
+		    image:"moni.jfif",
+		    Name:"Monisha",
+			College:"Einstein college Of Engingineering",
+			course:"Front-End Developer",
+			place:"pavoorchathiram"
+			
+		}
+		]
+		
+	    
+		
+		
+	    <!-- var  searchEle=document.getElementById("search"); -->
+		<!-- searchEle.filter(function(event){ -->
+		     <!-- event.toLowerCase(); -->
+		<!-- } -->
+		 var parent=document.getElementById("main");
+		  let friend1=document.createElement("div")
+		   let h1=document.createElement("h1");
+		 friend1.appendChild(h1);
+		 h1.innerHTML="PROFILE";
+		 h1.style.textAlign="center";
+		 
+		 
+		 
+		 parent.appendChild(friend1);
+		
+		friend1.style.marginTop="50px";
+		
+		let img=document.createElement("img");
+		let pic=document.createElement("div")
+		friend1.appendChild(pic);
+		img.src=my.image;
+		img.setAttribute("class","img");
+		pic.appendChild(img);
+		img.style.width="100%";
+		pic.setAttribute("class","pic")
+		
+		
+		let h2=document.createElement("h2");
+		 let p1=document.createElement("p");
+		 let p2=document.createElement("p");
+		 let p3=document.createElement("p");
+		 friend1.appendChild(h2);
+		 h2.innerHTML=my.Name;
+		 h2.style.textAlign="center";
+		 friend1.setAttribute("class","fri1")
+		friend1.appendChild(p1);
+		 p1.innerHTML=my.course;
+		 p1.style.textAlign="center";
+		 friend1.appendChild(p2);
+		 p2.innerHTML=my.College;
+		 p2.style.textAlign="center";
+		 friend1.appendChild(p3);
+		 p3.innerHTML=my.place;
+		 p3.style.textAlign="center";
+		 
+		
+		let group=document.createElement("div");
+		parent.appendChild(group);
+		group.setAttribute("class","group");
+		
+		
+		
+		
+		
+	  friends.forEach((obj)=>{
+	    
+	     let friend2=document.createElement("div")
+		 let detail=document.createElement("div")
+		 
+		 friend2.setAttribute("class","fri2")
+		 
+		 
+		 let img=document.createElement("img");
+		 img.setAttribute("class","img");
+		let picture=document.createElement("div")
+		friend2.appendChild(picture);
+		img.src=obj.image;
+		picture.appendChild(img);
+		img.style.width="100%";
+		picture.setAttribute("class","picture")
+		
+	    detail.setAttribute("class","detail")
+		 friend2.appendChild(detail);
+		 let h1=document.createElement("h1");
+		 detail.appendChild(h1);
+		 h1.innerHTML=obj.Name
+		 let p1=document.createElement("p");
+		 detail.appendChild(p1);
+		 p1.innerHTML=obj.course;
+		 let p2=document.createElement("p");
+		 detail.appendChild(p2);
+		 p1.innerHTML=obj.College;
+		 let p3=document.createElement("p");
+		 detail.appendChild(p3);
+		 p3.innerHTML=obj.place;
+		 
+		 
+		 
+		 group.appendChild(friend2);
+		
+		 
+		
+	
+		 
+		 
+		
+		
+		
+		
+		
+		
+	  })
+	
 	</script>
 </body>
 </html>
