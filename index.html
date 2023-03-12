@@ -181,6 +181,7 @@
 	    detail.setAttribute("class","detail")
 		 friend2.appendChild(detail);
 		 let h1=document.createElement("h1");
+		 h1.setAttribute("class","head");
 		 detail.appendChild(h1);
 		 h1.innerHTML=obj.Name
 		 let p1=document.createElement("p");
@@ -197,18 +198,24 @@
 		 
 		 group.appendChild(friend2);
 		
-		 
-		
+		})
 	
-		 
-		 
-		
-		
-		
-		
-		
-		
-	  })
+	   document.getElementById("search").addEventListener("keyup",keyupfun)
+	    function keyupfun(){
+	
+	       var boxes=document.querySelectorAll(".fri2");
+		   
+		   for(let i=0;i<boxes.length;i++){
+                 var val=document.getElementById("search").value.toLowerCase();
+				 if(boxes[i].innerHTML.toLowerCase().indexOf(val)!=-1){
+				     boxes[i].style.display="block";
+				     boxes[i].style.display="flex";
+				 }
+				 else{
+				     boxes[i].style.display="none";
+				 }
+		   }
+	    }
 	
 	</script>
 </body>
